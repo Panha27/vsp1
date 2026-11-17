@@ -1,0 +1,10 @@
+DEPLOY WITH THE DATABASE (Windows)
+1. Install Node.js (LTS) from https://nodejs.org
+2. Open this folder, click the address bar of File Explorer, type  cmd  and press Enter.
+3. npx wrangler login
+4. Open wrangler.toml in Notepad. Replace PASTE-YOUR-DATABASE-ID-HERE with the Database ID of your D1 database "vsp"
+   (Cloudflare dashboard -> Storage & databases -> D1 -> vsp -> Database ID).
+5. npx wrangler secret put ADMIN_PASSWORD      (type the admin password when asked)
+6. npx wrangler deploy
+7. Open your site, log in as  admin  with that password, then Admin -> Reset password to set a private one.
+Run step 6 again whenever you receive a new package.
